@@ -38,3 +38,24 @@ Nutri-Scan/
 - Version Control: Git & GitHub
 
 
+# NutriScan Frontend
+
+## Features
+- Responsive and accessible login and signup forms
+- Large, bold, and engaging input fields and buttons for better user experience
+- Toggle between login and signup forms without page reload
+- Aesthetic header image and clean UI design
+- Uses localStorage for simple user state management (demo purposes)
+
+## How to Run
+1. Clone this repo.
+2. Open `login.html` in a modern web browser.
+3. Enter credentials and test login/signup functionality.
+4. Upon login/signup, user is redirected to `index.html`.
+
+### Tech stack
+- Plain HTML, CSS, and JavaScript — no frameworks
+
+### Notes
+- No backend yet — just frontend for now
+- User info is saved locally in your browser’s storage for demo purposes only.
