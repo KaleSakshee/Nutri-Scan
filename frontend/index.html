@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NutriScan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <nav class="sidebar">
+      <h2>NutriScan</h2>
+      <ul>
+        <li id="menuProfile">👤 Profile</li>
+        <li id="menuHistory">📜 History</li>
+        <li id="menuHelp">❓ Help</li>
+        <li id="menuLogout">🚪 Logout</li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <header>
+        <h1>Welcome, <span id="usernameDisplay"></span></h1>
+      </header>
+
+      <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Enter product name..." />
+        <button id="searchBtn">🔍 Analyze</button>
+      </section>
+
+      <section class="barcode-section">
+        <input type="text" id="barcodeInput" placeholder="Enter barcode..." />
+        <button id="scanBtn">📷 Scan Barcode</button>
+      </section>
+
+      <section id="result"></section>
+
+      <section id="historySection" class="hidden">
+        <h2>Search History</h2>
+        <ul id="historyList"></ul>
+      </section>
+
+      <section id="profileSection" class="hidden">
+        <h2>User Profile</h2>
+        <p>Username: <span id="profileUsername"></span></p>
+        <!-- Add more profile info here -->
+      </section>
+
+      <section id="helpSection" class="hidden">
+        <h2>Help</h2>
+        <p>Enter product names or scan barcodes to get nutritional analysis and safer alternatives.</p>
+        <p>Use the menu to view your profile and search history.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

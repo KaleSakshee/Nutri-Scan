@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NutriScan - Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body.login-page {
+      background: #f0f5e1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #3a4a1a;
+    }
+    .login-container {
+      background: white;
+      padding: 40px 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(58, 74, 26, 0.3);
+      width: 460px;
+      text-align: center;
+    }
+    .login-container h1 {
+      margin-bottom: 25px;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #587a00;
+      user-select: none;
+    }
+    .header-img {
+      width: 100px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(88, 122, 0, 0.4);
+      user-select: none;
+    }
+    form input[type="text"],
+    form input[type="password"] {
+      width: 100%;
+      font-size: 1.0rem;
+      font-weight: 700;
+      padding: 14px 15px;
+      margin: 15px 0;
+      border: 2px solid #a3b66a;
+      border-radius: 10px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      color: #3a4a1a;
+    }
+    form input[type="text"]:focus,
+    form input[type="password"]:focus {
+      border-color: #587a00;
+      box-shadow: 0 0 10px #8aa944;
+      background-color: #f5f9d8;
+    }
+    form button {
+      width: 100%;
+      background-color: #6a8f24;
+      border: none;
+      padding: 18px 0;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #f9faf7;
+      border-radius: 12px;
+      cursor: pointer;
+      letter-spacing: 1.5px;
+      margin-top: 25px;
+      box-shadow: 0 7px 18px rgba(106, 143, 36, 0.6);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    form button:hover {
+      background-color: #587a00;
+      box-shadow: 0 9px 22px rgba(88, 122, 0, 0.8);
+    }
+    p {
+      margin-top: 22px;
+      font-size: 1rem;
+      color: #80904f;
+      user-select: none;
+    }
+    p a {
+      color: #587a00;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    p a:hover {
+      text-decoration: underline;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="login-page">
+  <div class="login-container" role="main">
+    <img 
+      src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=120&q=80" 
+      alt="NutriScan Logo" 
+      class="header-img" 
+      aria-hidden="true"
+    />
+    <h1>NutriScan</h1>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter username" required />
+      <input type="password" id="password" placeholder="Enter password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="signupToggle">Sign up</a></p>
+
+    <form id="signupForm" class="hidden">
+      <input type="text" id="newUsername" placeholder="Enter username" required />
+      <input type="password" id="newPassword" placeholder="Enter password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    const signupToggle = document.getElementById('signupToggle');
+
+    signupToggle.addEventListener('click', e => {
+      e.preventDefault();
+      loginForm.classList.toggle('hidden');
+      signupForm.classList.toggle('hidden');
+    });
+
+    loginForm.addEventListener('submit', e => {
+      e.preventDefault();
+      localStorage.setItem('nutriUser', document.getElementById('username').value);
+      window.location.href = 'index.html';
+    });
+
+    signupForm.addEventListener('submit', e => {
+      e.preventDefault();
+      localStorage.setItem('nutriUser', document.getElementById('newUsername').value);
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
