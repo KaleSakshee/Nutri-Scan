@@ -1,0 +1,6 @@
+ingredient,risk_level,reason,flags
+Sugar,High,Increases blood sugar,diabetic
+Cocoa,Low,Natural antioxidant,
+Milk Solids,Medium,Lactose intolerance risk,dairy
+Salt,Medium,High sodium,
+Peanuts,High,Allergic potential,nut allergy
