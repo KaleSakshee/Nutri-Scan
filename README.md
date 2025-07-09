@@ -37,6 +37,7 @@ Nutri-Scan/
 - Data: CSV, JSON
 - Version Control: Git & GitHub
 
+
 # NutriScan Frontend
 
 ## Features
